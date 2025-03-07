@@ -128,6 +128,21 @@ function deleteAllData() {
     };
     alert("Tutti i dati sono stati cancellati!");
   }
+  // Ad esempio, quando si salva un dato:
+document.getElementById("saveButton").addEventListener("click", function () {
+    const date = getDateFromUserInput(); // Supponiamo tu abbia un metodo per ottenere la data
+    const amount = getAmountFromUserInput(); // Supponiamo tu abbia un metodo per ottenere l'importo
+    const category = getCategoryFromUserInput(); // Supponiamo tu abbia un metodo per ottenere la categoria (IVA 22, IVA 10, ecc.)
+
+    // Salva il dato nel localStorage
+    saveData(date, amount, category);
+});
+
+// Carica i dati salvati all'inizio
+window.onload = function() {
+    displaySavedData(); // Carica i dati al caricamento dell'app
+};
+
 }
 
 // Aggiungi gli eventi ai pulsanti
@@ -157,6 +172,7 @@ if ('serviceWorker' in navigator) {
     }).catch(error => {
       console.log('Errore nella registrazione del ServiceWorker: ', error);
     });
+    
   });
 }
 
