@@ -1,0 +1,138 @@
+/* Resetting some basic browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body settings */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header styles */
+h1 {
+  color: #4CAF50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Container for buttons */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Style for buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Button container responsiveness */
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+}
+
+/* Calendar container styles */
+#calendar {
+  display: none;
+  margin-top: 20px;
+}
+
+input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+/* Keyboard and buttons for number input */
+#keyboard-container {
+  display: none;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#keyboard-container button {
+  background-color: #f2f2f2;
+  color: #333;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50px;
+}
+
+#keyboard-container button:hover {
+  background-color: #ddd;
+}
+
+/* Delete button styling */
+#delete-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#delete-btn:hover {
+  background-color: #e53e3e;
+}
+
+/* Ensuring the calendar popup works well in small screens */
+@media (max-width: 600px) {
+  #calendar {
+    width: 100%;
+  }
+  input[type="date"], input[type="number"] {
+    width: 100%;
+  }
+  #keyboard-container button {
+    width: 30%;
+  }
+}
